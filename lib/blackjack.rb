@@ -23,11 +23,11 @@ def end_game(total)
 end
 
 def initial_round
-  return display_card_total(deal_card() + deal_card())
+  puts "Your cards add up to "
+  return deal_card() + deal_card()
 end
 
 def hit?(number)
-  sum = initial_round()
   prompt_user()
   card_total = 0
   input = get_user_input()
