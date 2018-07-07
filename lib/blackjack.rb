@@ -29,11 +29,12 @@ end
 
 def hit?(number)
   prompt_user()
+  card_total = 0
   input = get_user_input()
   if input.downcase == 's'
-    # do thing
+    return card_total
   elsif input.downcase == 'h'
-    deal_card()
+    card_total += deal_card()
   else
     invalid_command()
     prompt_user()
