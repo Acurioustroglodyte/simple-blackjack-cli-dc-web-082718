@@ -1,4 +1,4 @@
-require 'binding.pry'
+require_relative 'binding.pry'
 
 def welcome
   puts "Welcome to the Blackjack Table"
