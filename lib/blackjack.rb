@@ -27,22 +27,21 @@ def initial_round
   return deal_card() + deal_card()
 end
 
-def hit?(number)
+def hit?(total)
   prompt_user()
-  card_total = 0
   input = get_user_input()
-  if input.downcase == 's'
-    return card_total
-  elsif input.downcase == 'h'
-    card_total += deal_card()
+  if input.downcase == "h"
+    total += deal_card()
+  elsif input.downcase == "s"
+    # do nothing
   else
     invalid_command()
-    prompt_user()
   end
+  return total
 end
 
 def invalid_command
-  # code invalid_command here
+  puts "Please enter a valid command"
 end
 
 #####################################################
