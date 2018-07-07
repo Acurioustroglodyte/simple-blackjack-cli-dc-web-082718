@@ -27,6 +27,7 @@ def initial_round
 end
 
 def hit?(number)
+  sum = initial_round()
   prompt_user()
   card_total = 0
   input = get_user_input()
